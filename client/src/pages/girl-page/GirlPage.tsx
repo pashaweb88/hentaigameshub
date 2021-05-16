@@ -63,29 +63,32 @@ interface GameCardProps {
 }
 const GameCard: React.FC<GameCardProps> = ({ element }) => {
   const downloadHandler = () => {
-    window.open("http://www.kidzout.com", "_system");
+    window.open(element.apkurl, "_system");
   };
 
   return (
-    <div className="card col-3 bg-dark text-light" style={{ margin: "0.5rem" }}>
-      <img src={element.icon} className="card-img-top" alt="poster" />
-      <div className="card-body">
-        <h5 className="card-title" style={{ minHeight: "5rem" }}>
-          {element.name}
-        </h5>
-        <div className="row">
-          <a className="btn btn-primary" onClick={downloadHandler}>
-            Download app
-          </a>
-        </div>
-        <div className="row">
-          <a
-            href={element.weburl}
-            target="_blank"
-            className="btn btn-link text-red"
-          >
-            Play online
-          </a>
+    //
+    <div className="col-6 col-lg-3">
+      <div className="card bg-dark text-light" style={{ margin: "0.5rem" }}>
+        <img src={element.icon} className="card-img-top" alt="poster" />
+        <div className="card-body">
+          <h5 className="card-title" style={{ minHeight: "6.2rem" }}>
+            {element.name}
+          </h5>
+          <div className="row">
+            <a className="btn btn-primary" onClick={downloadHandler}>
+              Download
+            </a>
+          </div>
+          <div className="row">
+            <a
+              href={element.weburl}
+              target="_blank"
+              className="btn btn-link text-red"
+            >
+              Play online
+            </a>
+          </div>
         </div>
       </div>
     </div>
