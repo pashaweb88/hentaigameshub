@@ -63,7 +63,10 @@ interface GameCardProps {
 }
 const GameCard: React.FC<GameCardProps> = ({ element }) => {
   const downloadHandler = () => {
-    window.open(element.apkurl, "_system");
+    window.open(
+      "http://dash.hentaigameshub.com/?d=" + element.apkurl,
+      "_system"
+    );
   };
 
   return (
