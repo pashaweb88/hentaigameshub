@@ -62,8 +62,10 @@ interface GameCardProps {
   element: any;
 }
 const GameCard: React.FC<GameCardProps> = ({ element }) => {
-  const playHandler = () => {};
-  const dowladHanler = () => {};
+  const downloadHandler = () => {
+    window.open("http://www.kidzout.com", "_system");
+  };
+
   return (
     <div className="card col-3 bg-dark text-light" style={{ margin: "0.5rem" }}>
       <img src={element.icon} className="card-img-top" alt="poster" />
@@ -72,14 +74,18 @@ const GameCard: React.FC<GameCardProps> = ({ element }) => {
           {element.name}
         </h5>
         <div className="row">
-          <button className="btn btn-primary" onClick={playHandler}>
+          <a className="btn btn-primary" onClick={downloadHandler}>
             Download app
-          </button>
+          </a>
         </div>
         <div className="row">
-          <button className="btn btn-link text-red" onClick={dowladHanler}>
+          <a
+            href={element.weburl}
+            target="_blank"
+            className="btn btn-link text-red"
+          >
             Play online
-          </button>
+          </a>
         </div>
       </div>
     </div>
