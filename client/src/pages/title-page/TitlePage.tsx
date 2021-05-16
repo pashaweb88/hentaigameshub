@@ -30,12 +30,12 @@ export const TitlePage: React.FC = () => {
           {pers.map((el, i) => {
             if (active) {
               return (
-                <>
+                <React.Fragment key={i}>
                   {el.name.toLowerCase().indexOf(search.toLowerCase()) !==
                   -1 ? (
                     <CardBlock element={el} key={i} />
                   ) : null}
-                </>
+                </React.Fragment>
               );
             }
             return <CardBlock element={el} key={i} />;
