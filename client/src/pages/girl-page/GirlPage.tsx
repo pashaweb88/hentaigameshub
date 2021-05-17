@@ -73,7 +73,9 @@ const GameCard: React.FC<GameCardProps> = ({ element }) => {
     //
     <div className="col-6 col-lg-3">
       <div className="card bg-dark text-light" style={{ margin: "0.5rem" }}>
-        <img src={element.icon} className="card-img-top" alt="poster" />
+        <div className="card-img-wrapper">
+          <img src={element.icon} className="card-img-top" alt="poster" />
+        </div>
         <div className="card-body">
           <h5 className="card-title" style={{ minHeight: "6.2rem" }}>
             {element.name}

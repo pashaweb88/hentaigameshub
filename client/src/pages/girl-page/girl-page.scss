@@ -15,6 +15,12 @@
       display: block;
     }
   }
+  .card {
+    .card-img-wrapper {
+      max-height: 220px;
+      overflow: hidden;
+    }
+  }
   .banner-overlay {
     position: absolute;
     top: 0;
@@ -35,6 +41,11 @@
     padding-top: 220px;
     .banner {
       height: 200px;
+    }
+    .card {
+      .card-img-wrapper {
+        max-height: 150px;
+      }
     }
     .banner-overlay {
       height: 200px;
