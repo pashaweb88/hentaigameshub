@@ -6,6 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './store';
 
+
+//@ts-ignore
+if (window.cordova) {
+  //@ts-ignore
+  cordova.plugins.firebase.analytics.logEvent("hub_install");
+  console.log('event');
+}
 ReactDOM.render(
   <Provider store={store}>
     <App />
